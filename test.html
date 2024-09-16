@@ -1,10 +1,8 @@
 <script>
     window.addEventListener('scroll', () => {
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight; // getting the scrollable area
         const quarterHeight = Math.ceil(scrollable / 4);
         const halfHeight = Math.ceil(scrollable / 2);
-
         const scrolled = Math.ceil(window.scrollY);
 
         console.log('scrolled', scrolled);
