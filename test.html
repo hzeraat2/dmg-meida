@@ -1,0 +1,26 @@
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+
+        const quarterHeight = Math.ceil(scrollable / 4);
+        const halfHeight = Math.ceil(scrollable / 2);
+
+        const scrolled = Math.ceil(window.scrollY);
+
+        console.log('scrolled', scrolled);
+        console.log('quarterHeight', quarterHeight);
+        console.log('halfHeight', halfHeight);
+
+        if (scrolled === quarterHeight){
+            alert('You have reached 25% of the article')
+        }
+
+        if (scrolled === halfHeight){
+            alert('You have reached 50% of the article')
+        }
+
+        if (scrolled === scrollable){
+            alert('You have reached 100% of the article')
+        }
+    })
+</script>
